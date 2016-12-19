@@ -44,8 +44,6 @@
     <Content Include="Main.html" />
     <Content Include="App.config" />
     <Content Include="packages.config" />
-    <Content Include="powerbi.min.js" />
-    <Content Include="powerbi.js.map" />
   </ItemGroup>
   <Target Name="IncludeContent" BeforeTargets="Compile">
     <ItemGroup>
@@ -172,10 +170,6 @@
       <HintPath>..\packages\WebSharper.3.6.18.241\lib\net40\WebSharper.Collections.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="WebSharper.Community.PowerBI">
-      <HintPath>D:\git_repos\WebSharper.Community.PowerBI\packages\WebSharper.Community.PowerBI.1.0.0\lib\net40\WebSharper.Community.PowerBI.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="WebSharper.Control">
       <HintPath>..\packages\WebSharper.3.6.18.241\lib\net40\WebSharper.Control.dll</HintPath>
       <Private>True</Private>
@@ -232,6 +226,13 @@
       <HintPath>..\packages\WebSharper.3.6.18.241\lib\net40\WebSharper.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebSharper.Community.PowerBI\WebSharper.Community.PowerBI.fsproj">
+      <Name>WebSharper.Community.PowerBI</Name>
+      <Project>{d49b8aa1-b9ad-406b-abc7-85518159e34e}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <!-- F# targets -->
   <Choose>

@@ -13,6 +13,8 @@ module Reports =
     let accessKey = ConfigurationManager.AppSettings.["powerbi:AccessKey"]
     let apiUrl = ConfigurationManager.AppSettings.["powerbi:ApiUrl"]
     let roles = ConfigurationManager.AppSettings.["powerbi:Roles"]
+
+    let sampleAccessToken = ConfigurationManager.AppSettings.["powerbi:AccessToken"]
     
     let expiration = ConfigurationManager.AppSettings.["powerbi:Expiration"] //miutes
 
@@ -41,18 +43,24 @@ module Reports =
     }
 
     let Report (reportId:string) (clienthash:string) = async {
-        use client = powerBiClient()   
-        let! reports = client.Reports.GetReportsAsync(workspaceCollection, workspaceId) |> Async.AwaitTask
-        let report =   
-            reports.Value |> Seq.tryFind (fun elem -> elem.Id = reportId)
-        //let embedToken = PowerBIToken.CreateReportEmbedToken(workspaceCollection, workspaceId, report.Value.Id)
-        let embedToken = 
-            PowerBIToken.CreateReportEmbedToken(
-                workspaceCollection, workspaceId, report.Value.Id, 
-                createExpiration(),
-                clienthash, createRoles())
-        let accessToken = embedToken.Generate(accessKey)
-        return {ReportId = report.Value.Id; EmbedUrl = report.Value.EmbedUrl; AccessToken = accessToken}}
+//        use client = powerBiClient()   
+//        let! reports = client.Reports.GetReportsAsync(workspaceCollection, workspaceId) |> Async.AwaitTask
+//        let report =   
+//            reports.Value |> Seq.tryFind (fun elem -> elem.Id = reportId)
+//        //let embedToken = PowerBIToken.CreateReportEmbedToken(workspaceCollection, workspaceId, report.Value.Id)
+//        let embedToken = 
+//            PowerBIToken.CreateReportEmbedToken(
+//                workspaceCollection, workspaceId, report.Value.Id, 
+//                createExpiration(),
+//                clienthash, createRoles())
+//        let accessToken = embedToken.Generate(accessKey)
+//
+//        return {ReportId = report.Value.Id; EmbedUrl = report.Value.EmbedUrl; AccessToken = accessToken}}
+
+            let accessToken = sampleAccessToken
+            return {ReportId = "c52af8ab-0468-4165-92af-dc39858d66ad"
+                    EmbedUrl = "https://embedded.powerbi.com/appTokenReportEmbed"
+                    AccessToken = accessToken}}
 
     let ReportTest (client:string) = async {
         let reports = Reports()
