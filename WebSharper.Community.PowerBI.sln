@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WebSharper.Community.PowerBI.Sample", "WebSharper.Community.PowerBI.Sample\WebSharper.Community.PowerBI.Sample.fsproj", "{246378AC-C1DB-4F52-A2E4-3B0DBB966C09}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WebSharper.Community.PowerBI", "WebSharper.Community.PowerBI\WebSharper.Community.PowerBI.fsproj", "{D49B8AA1-B9AD-406B-ABC7-85518159E34E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{246378AC-C1DB-4F52-A2E4-3B0DBB966C09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{246378AC-C1DB-4F52-A2E4-3B0DBB966C09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{246378AC-C1DB-4F52-A2E4-3B0DBB966C09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{246378AC-C1DB-4F52-A2E4-3B0DBB966C09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D49B8AA1-B9AD-406B-ABC7-85518159E34E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D49B8AA1-B9AD-406B-ABC7-85518159E34E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D49B8AA1-B9AD-406B-ABC7-85518159E34E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D49B8AA1-B9AD-406B-ABC7-85518159E34E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
