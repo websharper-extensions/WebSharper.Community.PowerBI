@@ -42,8 +42,10 @@ module Site =
     open System.Configuration
 
     let HomePage ctx =
-        let clientId = ConfigurationManager.AppSettings.["powerbi:ClientID"]
-        let report = ReportTest(clientId) |> Async.RunSynchronously
+        let username = "FAKE_USERNAME_FOR_ACCESS_TOKEN_ROLE"
+//        let report = ReportTest(username) |> Async.RunSynchronously
+
+        let report = ReportSample() |> Async.RunSynchronously
 
         Templating.Main ctx EndPoint.Home "Home" [
             h1 [text "Say Hi to the server!"]

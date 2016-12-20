@@ -57,9 +57,10 @@
   <ItemGroup>
     <Compile Include="Main.fs" />
     <Content Include="packages.config" />
-    <EmbeddedResource Include="powerbi.js" />
-    <Content Include="powerbi.min.js" />
-    <Content Include="powerbi.js.map" />
+    <None Include="scripts\typings\powerbi.d.ts" />
+    <EmbeddedResource Include="scripts\powerbi.min.js" />
+    <EmbeddedResource Include="scripts\powerbi.js.map" />
+    <EmbeddedResource Include="scripts\powerbi.js" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
